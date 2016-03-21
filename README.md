@@ -8,5 +8,5 @@ You can use this app by the following three steps.
   2. Process of recognition. Push the the button to start and push the third button to end it. And while you push the third button, the recognition results will be shown in the display board.
 
 For Developers.
-  1. MainAcitivity.java is at AudioSpeakerDiarization/src/com/audiorecordtest/MainActivity.java.
-  2. You can also get to start by reference to AudioSpeakerDiarization/src/com/audioprocessingbox/myfunc/AppSIDDemo.java.
+  1. MainAcitivity.java is at /src/com/audiorecordtest/MainActivity.java.
+  2. You can also get to start by reference to /src/com/audioprocessingbox/myfunc/AppSIDDemo.java.
