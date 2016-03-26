@@ -38,6 +38,7 @@ import com.audioprocessingbox.distances.EuclideanDistanceCalculator;
 import com.audioprocessingbox.enhancements.Normalizer;
 import com.audioprocessingbox.features.FeaturesExtractor;
 import com.audioprocessingbox.features.LpcFeaturesExtractor;
+import com.audioprocessingbox.utils.BasicFeatureExtraction;
 import com.audioprocessingbox.utils.FileHelper;
 import com.audioprocessingbox.utils.WavFile;
 import com.audioprocessingbox.utils.WavFileException;
@@ -366,11 +367,14 @@ public class Recognito<K> {
         AutocorrellatedVoiceActivityDetector voiceDetector = new AutocorrellatedVoiceActivityDetector();
         Normalizer normalizer = new Normalizer();
         FeaturesExtractor<double[]> lpcExtractor = new LpcFeaturesExtractor(sampleRate, 20);
-
+        
         voiceDetector.removeSilence(voiceSample, sampleRate);
         normalizer.normalize(voiceSample, sampleRate);
         double[] lpcFeatures = lpcExtractor.extractFeatures(voiceSample);
-
-        return lpcFeatures;
+        double[] mfcc = new BasicFeatureExtraction().extractMfcc(voiceSample);
+		double[] features= new double[20+39];
+		System.arraycopy(lpcFeatures, 0, features, 0, 20);
+		System.arraycopy(mfcc, 0, features, 20, 39);
+        return features;
     }
 }
