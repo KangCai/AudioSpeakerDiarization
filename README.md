@@ -5,7 +5,8 @@
 
 An android project for speaker diarization by speech
 
-A simple but pratical android app for real-time speaker diarization. As far as I'm concerned, there is no real-time speaker diarizatino tool now.
+A simple android app for real-time speaker diarization. As far as I'm concerned, there is no real-time speaker diarizatino tool now. But I have to admit the performance of this version is far from pratical application, because the method is LPC + MFCC / Euclidean Distance. My next plan is to implement a system with the state of the art method, i-vector + PLDA.
+
 
 ##Usage
 
