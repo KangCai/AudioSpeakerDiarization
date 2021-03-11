@@ -1,7 +1,7 @@
-#AudioSpeakerDiarization
+# AudioSpeakerDiarization
 ============================================================
 
-###Note
+### Note
 
 An android project for speaker diarization by speech
 
@@ -10,7 +10,7 @@ An android project for speaker diarization by speech
 A simple android app for real-time speaker diarization. As far as I'm concerned, there is no real-time speaker diarizatino tool now. But I have to admit the performance of this version is far from pratical application, because the method is LPC + MFCC / Euclidean Distance. My next plan is to implement a system with the state of the art method, i-vector + PLDA.
 
 
-###Usage
+### Usage
 
 You can use this app by the following three steps.
   1. Process of creating user. Input several (>=1) pairs of name (String) and audio recording. I have realized the recording function in the app. You should push the first button to start recording and push the second button to end it. And while you push the second button, a pair has been created in the database (in fact a file).
